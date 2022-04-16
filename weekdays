@@ -1,0 +1,29 @@
+#created by vanderphill
+#prints the number of weekdays in a bi-monthly pay period for specified years
+
+import datetime
+from calendar import monthrange
+
+startYear = 2022
+endYear = 2025
+
+
+for year in range (StartYear,endYear+1):
+    for month in range(1,12):
+        weekdays = 0
+        for day in range (1,16):
+            date = datetime.date(year,month,day)
+            if date.isoweekday() in range(1,6):
+                weekdays +=1
+        print("there are " + str(weekdays) + " weekdays in " + str(month) + "/1/" +str(year) + " - " +str(month) + "/15/" +str(year))
+
+        x,dim = monthrange(year,month)
+        weekdays = 0
+        for day in range(16,dim+1):
+            date = datetime.date(year,month,day)
+            if date.isoweekday() in range(1,6):
+                weekdays +=1
+        print("there are " + str(weekdays) + " weekdays in " + str(month) + "/16/" +str(year) + " - " +str(month) + "/" +str(dim)+ "/" +str(year))
+
+        
+            
