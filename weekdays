@@ -8,7 +8,7 @@ startYear = 2022
 endYear = 2025
 
 
-for year in range (StartYear,endYear+1):
+for year in range (startYear,endYear+1):
     for month in range(1,12):
         weekdays = 0
         for day in range (1,16):
